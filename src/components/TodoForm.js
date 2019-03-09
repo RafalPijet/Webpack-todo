@@ -7,8 +7,7 @@ const TodoForm = props =>
          <input className={style.Input} type="text" id="enterText" onKeyUp={(event) => {
 
              if (event.keyCode === 13) {
-                 let taskText = event.target.value;
-                 props.onTask(taskText);
+                 props.onTask(event.target.value);
                  event.target.value = "";
              }
          }}/>
